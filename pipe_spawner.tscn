@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqq06is5sl1vf"]
+
+[ext_resource type="Script" path="res://pipe_spawner.gd" id="1_itpgp"]
+
+[node name="PipeSpawner" type="Node2D"]
+script = ExtResource("1_itpgp")
+
+[node name="SpawnTimer" type="Timer" parent="."]
