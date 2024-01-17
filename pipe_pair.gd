@@ -13,9 +13,12 @@ func set_speed(new_speed):
 func _process(delta):
 	position.x += speed * delta
 
-
 func _on_pipe_body_entered(body):
 	bird_entered.emit()
 
 func _on_scored_body_entered(body):
-	point_scored.emit()
+	point_scored.emit() 
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()

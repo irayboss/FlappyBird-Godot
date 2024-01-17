@@ -42,6 +42,9 @@ shape = SubResource("RectangleShape2D_ugk8k")
 position = Vector2(29.5, 0)
 shape = SubResource("RectangleShape2D_t64cw")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="body_entered" from="TopPipe" to="." method="_on_pipe_body_entered"]
 [connection signal="body_entered" from="BottomPipe" to="." method="_on_pipe_body_entered"]
 [connection signal="body_entered" from="Scored" to="." method="_on_scored_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
