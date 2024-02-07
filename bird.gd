@@ -33,6 +33,8 @@ func _physics_process(delta):
 	move_and_collide(velocity * delta) 
 	
 	rotate_bird()
+	
+	print(velocity)
 
 func jump():
 	if !is_started:
@@ -45,8 +47,8 @@ func jump():
 func rotate_bird():
 	if velocity.y > 0 && deg_to_rad(rotation) < 90:  
 		rotation += rotation_speed * deg_to_rad(1)
-	elif velocity.y < 0 && deg_to_rad(rotation) > -30:
-		rotation -= rotation_speed * deg_to_rad(1)
+#	elif velocity.y < 0 && deg_to_rad(rotation) > -30:
+#		rotation -= rotation_speed * deg_to_rad(1)
 
 func kill(): 
 	should_process_input = false
